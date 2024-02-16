@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <header>
+        <h1 class="app-heading">Weather App</h1>
+        <img src="./Assets/1000_F_239415578_O2VkmRasXayJaaUpFoldVXb6H3QvgFHu.jpg" alt="logo-img" width="50px" height="50px">
+    </header>
+    
+    <main>
+        <section>
+            <div>
+                <label for="city">Enter Your Country:</label><br>
+                <input list="options" id="custom-select" placeholder="Type or select">
+                <datalist id="options">
+                    <option value="India">
+                    <option value="Newzeland">
+                    <option value="Australia">
+                    
+                    <!-- Add more options as needed -->
+                </datalist>
+            </div>
+        
+             <div>
+                <label for="city">You need Air data then select ?</label><br>
+                <select name="" id="air">
+                    <option value="">Select</option>
+                    <option value="">yes</option>
+                    <option value="">no</option>
+                </select>
+             </div>
+            
+            <button onclick="getWeather()">Get Weather</button>
+        
+            <div id="weather-container"></div>
+        </section>
+    </main>
+
+    <script src="./index.js"></script>
+</body>
+</html>
