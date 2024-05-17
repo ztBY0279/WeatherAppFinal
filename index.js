@@ -2,6 +2,10 @@ function getWeather() {
 
     const customSelect = document.getElementById('custom-select');
     let selectedCountry = customSelect.value;
+    if(selectedCountry === null || selectedCountry === undefined || selectedCountry === ""){
+        alert("Please select a country");
+        return;
+    }
    
     let air = document.getElementById("air");
     console.log('theAir is ',air);
@@ -9,6 +13,11 @@ function getWeather() {
     let airValue = air.options[air.selectedIndex];
     console.log('the AirValue is ',airValue,airValue.value);
     console.log(airValue.innerText);
+    if(airValue.innerText === "Select"){
+        alert("Please select About air data");
+        return;
+    }
+
     const apiUrl = `https://api.weatherapi.com/v1/current.json?key=bc9e35e67d454381a5a62032240202&q=${selectedCountry}&aqi=${airValue.innerText}`;
 
     fetch(apiUrl)
@@ -32,6 +41,7 @@ function getWeather() {
                     <th>Timezone ID</th>
                     <th>Temperature (°C)</th>
                     <th>Temperature (°F)</th>
+                    <th>Air quality</th>
                   
                 </tr>
             </thead>
@@ -43,6 +53,7 @@ function getWeather() {
                <td>${data.location.tz_id}</td>
                <td>${data.current.temp_c}</td>
                <td>${data.current.temp_f}</td>
+               <td>${temp}</td> 
                
 
               </tr>

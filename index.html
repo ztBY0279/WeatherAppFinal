@@ -5,6 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather App</title>
     <link rel="stylesheet" href="./style.css">
+    <style>
+        /* Additional CSS for dropdown positioning */
+        #options {
+            position: absolute;
+            width: calc(100% - 20px);
+            left: 0;
+            background-color: white;
+            z-index: 1;
+            border: 1px solid #ccc;
+            border-top: none;
+            max-height: 200px;
+            overflow-y: auto;
+        }
+        #options option {
+            padding: 5px;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -19,10 +36,98 @@
                 <input list="options" id="custom-select" placeholder="Type or select">
                 <datalist id="options">
                     <option value="India">
-                    <option value="Newzeland">
+                        <option value="United States">
+                        <option value="China">
+                        <option value="Indonesia">
+                        <option value="Pakistan">
+                        <option value="Brazil">
+                        <option value="Nigeria">
+                        <option value="Bangladesh">
+                        <option value="Russia">
+                        <option value="Mexico">
+                        <option value="Japan">
+                        <option value="Ethiopia">
+                        <option value="Philippines">
+                        <option value="Egypt">
+                        <option value="Vietnam">
+                        <option value="DR Congo">
+                        <option value="Turkey">
+                        <option value="Iran">
+                        <option value="Germany">
+                        <option value="France">
+                        <option value="United Kingdom">
+                        <option value="Italy">
+                        <option value="South Africa">
+                        <option value="South Korea">
+                        <option value="Colombia">
+                        <option value="Spain">
+                        <option value="Argentina">
+                        <option value="Ukraine">
+                        <option value="Sudan">
+                        <option value="Uganda">
+                        <option value="Iraq">
+                        <option value="Poland">
+                        <option value="Canada">
+                        <option value="Morocco">
+                        <option value="Afghanistan">
+                        <option value="Saudi Arabia">
+                        <option value="Peru">
+                        <option value="Venezuela">
+                        <option value="Malaysia">
+                        <option value="Uzbekistan">
+                        <option value="Mozambique">
+                        <option value="Nepal">
+                        <option value="Ghana">
+                        <option value="Yemen">
+                    <!-- Add more options as needed -->
+                </datalist>
+            </div>
+        
+             <div>
+                <label for="city">Do you need Air data?</label><br>
+                <select id="air">
+                    <option value="">Select</option>
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option>
+                </select>
+             </div>
+            
+            <button onclick="getWeather()">Get Weather</button>
+        
+            <div id="weather-container"></div>
+        </section>
+    </main>
+
+    <script src="./index.js"></script>
+</body>
+</html>
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <header>
+        <h1 class="app-heading">Weather App</h1>
+        <img src="./Assets/1000_F_239415578_O2VkmRasXayJaaUpFoldVXb6H3QvgFHu.jpg" alt="logo-img" width="50px" height="50px">
+    </header>
+    
+    <main>
+        <section>
+            <div>
+                <label for="city">Enter Your Country:</label><br>
+                <input list="options" id="custom-select" placeholder="Type or select">
+                <datalist id="options">
+                    <option value="India">
+                    <option value="New zealand">
                     <option value="Australia">
                     
-                    <!-- Add more options as needed -->
+                    
                 </datalist>
             </div>
         
@@ -43,4 +148,4 @@
 
     <script src="./index.js"></script>
 </body>
-</html>
+</html> -->
