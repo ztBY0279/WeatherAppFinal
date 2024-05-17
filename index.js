@@ -8,11 +8,8 @@ function getWeather() {
     }
    
     let air = document.getElementById("air");
-    console.log('theAir is ',air);
   
     let airValue = air.options[air.selectedIndex];
-    console.log('the AirValue is ',airValue,airValue.value);
-    console.log(airValue.innerText);
     if(airValue.innerText === "Select"){
         alert("Please select About air data");
         return;
@@ -72,7 +69,6 @@ function getWeather() {
             })
         })
         .catch(error => {
-            console.error('Error fetching weather data:', error);
             alert('Error fetching weather data. Please try again.');
         });
 }
