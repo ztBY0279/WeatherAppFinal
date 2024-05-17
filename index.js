@@ -67,6 +67,8 @@ function getWeather() {
 
             document.getElementById("reset").addEventListener('click',()=>{
                 weatherContainer.innerHTML = "";
+                customSelect.value = "";
+                air.value = "";
             })
         })
         .catch(error => {
